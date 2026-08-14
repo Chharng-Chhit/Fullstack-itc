@@ -20,21 +20,26 @@ Apply one external CSS file to the HTML project created in the previous sessions
 - `create-product.html` — styled product form
 - `create-category.html` — styled category form
 - `style.css` — shared external stylesheet
+- `CSS-SECTION-GUIDE.md` — HTML layout and CSS explanation for each section
 
 ## Practical Tasks
 
-1. Open all three HTML pages and identify the `<link>` element in each `<head>`.
-2. Open `style.css` and identify element, class, grouped, descendant, attribute, and pseudo-class selectors.
-3. Change the main theme color in navigation links, buttons, and focus states.
-4. Change the body font and compare the result in all pages.
-5. Adjust margin and padding values in `section`, `.form-group`, `th`, and `td`.
-6. Add a `Low Stock` class with an orange color and apply it to a product.
-7. Add one new sample product row.
-8. Test every navigation link and form field in the browser.
+1. Open all three HTML pages and identify the `<header>`, `<nav>`, `<main>`, `<section>`, and `<footer>` elements.
+2. Draw the HTML element tree for one page.
+3. Identify the table layout in `index.html` and the form layout in the other pages.
+4. Identify the `<link>` element in each `<head>`.
+5. Open `style.css` and identify element, class, grouped, descendant, attribute, and pseudo-class selectors.
+6. Change the main theme color in navigation links, buttons, and focus states.
+7. Change the body font and compare the result in all pages.
+8. Adjust margin and padding values in `section`, `.form-group`, `th`, and `td`.
+9. Add a `Low Stock` class with an orange color and apply it to a product.
+10. Add one new sample product row.
+11. Test every navigation link and form field in the browser.
 
 ## Required Output
 
 - One external `style.css` file linked to every page
+- Correct header, navigation, main, section, table/form, and footer layout
 - Consistent project colors and fonts
 - Styled navigation links
 - Styled table, rows, cells, and status text
@@ -45,6 +50,7 @@ Apply one external CSS file to the HTML project created in the previous sessions
 ## Submission Checklist
 
 - [ ] CSS loads on all three pages
+- [ ] HTML layout uses header, navigation, main content, sections, and footer correctly
 - [ ] No inline CSS is used
 - [ ] Navigation links work
 - [ ] Table remains readable

@@ -1,6 +1,359 @@
-# CSS Styling Guide for Each Page Section
+# HTML Layout and CSS Styling Guide
 
-This guide explains how to add CSS to each section of the Day 4 project. Add the CSS rules to `style.css`, save the file, and refresh the HTML page in the browser after every step.
+This guide first explains the HTML layout of the Day 4 pages. It then explains how to add CSS to each section. Read the HTML structure first so you understand which element each CSS selector changes.
+
+# Part A: HTML Page Layout
+
+## 1. Common Layout of Every Page
+
+All three HTML pages use the same main structure:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    Page information and CSS link
+</head>
+<body>
+    <header>
+        Logo, title, description, and navigation
+    </header>
+
+    <main>
+        Main page content
+    </main>
+
+    <footer>
+        Copyright and page links
+    </footer>
+</body>
+</html>
+```
+
+The layout can be read from top to bottom:
+
+```text
+body
+├── header
+│   ├── logo
+│   ├── page title
+│   ├── description
+│   └── navigation
+├── main
+│   ├── content section
+│   └── student practice section
+└── footer
+```
+
+- `<header>` is the top area of the page.
+- `<main>` contains the unique and most important page content.
+- `<section>` groups related content inside `<main>`.
+- `<footer>` is the bottom area of the page.
+
+Each page should contain only one `<main>` element.
+
+## 2. Document and Head Layout
+
+Every page begins with:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+```
+
+- `<!DOCTYPE html>` tells the browser to use modern HTML.
+- `<html>` wraps the complete HTML document.
+- `lang="en"` identifies the page language as English.
+
+The `<head>` contains page information that is not shown as normal page content:
+
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List - Day 4 TP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+```
+
+- `charset` lets the page display text correctly.
+- `viewport` helps the page fit the device screen.
+- `<title>` appears in the browser tab.
+- `<link>` connects the external stylesheet.
+
+## 3. Header Layout
+
+The header introduces the page:
+
+```html
+<header>
+    <img src="..." alt="ShopHub Logo" width="150" height="50">
+    <h1>ShopHub Product List</h1>
+    <p>A product table styled with one external CSS file.</p>
+    <nav aria-label="Main navigation">
+        ...navigation links...
+    </nav>
+</header>
+```
+
+- `<img>` displays the website logo.
+- `alt` describes the logo when the image cannot be seen.
+- `<h1>` is the main page heading.
+- `<p>` gives a short page description.
+- `<nav>` groups the main navigation links.
+
+Each page has a different `<h1>` and description, but the header layout stays the same.
+
+## 4. Navigation Layout
+
+The navigation is an unordered list of links:
+
+```html
+<nav aria-label="Main navigation">
+    <ul>
+        <li><a href="index.html">Product List</a></li>
+        <li><a href="create-product.html">Create Product</a></li>
+        <li><a href="create-category.html">Create Category</a></li>
+    </ul>
+</nav>
+```
+
+- `<nav>` identifies the navigation area.
+- `<ul>` creates an unordered list.
+- Each `<li>` is one navigation item.
+- Each `<a>` opens another HTML page.
+- `href` contains the destination file name.
+
+The same navigation appears on all three pages. This allows the user to move between pages.
+
+## 5. Main and Section Layout
+
+The `<main>` area contains two sections:
+
+```html
+<main>
+    <section>
+        Page table or form
+    </section>
+
+    <section class="student-practice">
+        Student tasks
+    </section>
+</main>
+```
+
+The first section contains the page's main activity. The second section contains practice instructions.
+
+The class name connects an HTML element to a CSS class selector:
+
+```html
+<section class="student-practice">
+```
+
+```css
+.student-practice {
+    background-color: #fffbeb;
+}
+```
+
+## 6. Product List Table Layout
+
+The main section in `index.html` contains a product table:
+
+```html
+<section>
+    <h2>Sample Products</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                Table headings
+            </thead>
+            <tbody>
+                Product rows
+            </tbody>
+        </table>
+    </div>
+</section>
+```
+
+The table structure is:
+
+```text
+table
+├── thead
+│   └── tr
+│       └── th
+└── tbody
+    └── tr
+        └── td
+```
+
+- `<table>` contains the complete table.
+- `<thead>` groups the heading row.
+- `<tbody>` groups the product data rows.
+- `<tr>` creates one table row.
+- `<th>` creates a heading cell.
+- `<td>` creates a data cell.
+
+Example heading row:
+
+```html
+<tr>
+    <th>ID</th>
+    <th>Image</th>
+    <th>Product Name</th>
+    <th>Category</th>
+    <th>Price</th>
+    <th>Stock</th>
+    <th>Status</th>
+    <th>Action</th>
+</tr>
+```
+
+Example product row:
+
+```html
+<tr>
+    <td>1</td>
+    <td><img class="product-image" src="..." alt="Wireless headphones"></td>
+    <td>Wireless Headphones</td>
+    <td>Electronics</td>
+    <td>$99.99</td>
+    <td>25</td>
+    <td class="status-available">Available</td>
+    <td><a href="#">View</a></td>
+</tr>
+```
+
+- The number of `<td>` cells should match the number of `<th>` cells.
+- `.product-image` is used to style product images.
+- `.status-available` and `.status-out` style different status text.
+- `.table-wrapper` helps control the table when the available space is small.
+
+## 7. Product Form Layout
+
+The main section in `create-product.html` contains a form:
+
+```html
+<section>
+    <h2>Product Information</h2>
+    <form>
+        <div class="form-group">
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" name="product_name" required>
+        </div>
+
+        ...more form groups...
+
+        <button type="submit">Save Product</button>
+        <button type="reset">Clear Form</button>
+    </form>
+</section>
+```
+
+Each `.form-group` keeps one label and one field together.
+
+```text
+form
+├── form-group
+│   ├── label
+│   └── input
+├── form-group
+│   ├── label
+│   └── select
+├── form-group
+│   ├── label
+│   └── textarea
+└── buttons
+```
+
+- `<form>` groups all input controls.
+- `<label>` explains what the user should enter.
+- `<input>` collects short information.
+- `<select>` provides a list of choices.
+- `<textarea>` collects a longer description.
+- The submit button sends the form.
+- The reset button clears the form.
+
+The label and field are connected by matching values:
+
+```html
+<label for="product-name">Product Name</label>
+<input id="product-name" type="text">
+```
+
+`for="product-name"` matches `id="product-name"`.
+
+## 8. Category Form Layout
+
+The main section in `create-category.html` uses the same form layout:
+
+```html
+<form>
+    <div class="form-group">
+        <label for="category-name">Category Name</label>
+        <input type="text" id="category-name" name="category_name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="parent-category">Parent Category</label>
+        <select id="parent-category" name="parent_category">
+            <option value="">No Parent Category</option>
+            <option value="electronics">Electronics</option>
+        </select>
+    </div>
+</form>
+```
+
+The form fields are different, but the structure and CSS classes are the same. Therefore, one `style.css` file can style both forms.
+
+## 9. Student Practice Layout
+
+Every page has a student task section:
+
+```html
+<section class="student-practice">
+    <h2>Student Practice</h2>
+    <ol>
+        <li>First task</li>
+        <li>Second task</li>
+    </ol>
+</section>
+```
+
+- `<ol>` creates a numbered list.
+- `<li>` creates each task.
+- The class gives the section a different visual style.
+
+## 10. Footer Layout
+
+The footer closes the page:
+
+```html
+<footer>
+    <p>&copy; 2026 Fullstack ITC Practice. CSS Foundation.</p>
+    <p>
+        <a href="index.html">Product List</a> |
+        <a href="create-product.html">Create Product</a> |
+        <a href="create-category.html">Create Category</a>
+    </p>
+</footer>
+```
+
+The footer repeats the page links so navigation remains available at the bottom.
+
+## HTML Layout Practice
+
+1. Identify the `<header>`, `<main>`, and `<footer>` in every page.
+2. Identify the two `<section>` elements inside `<main>`.
+3. Draw the element tree for one page.
+4. Add one product row with the correct number of cells.
+5. Add one new form group with a label and input.
+6. Check that each label `for` matches its field `id`.
+7. Test every navigation link.
+8. Explain which HTML elements are shared by all pages.
+
+# Part B: CSS Styling for Each Section
 
 ## 1. Connect CSS to Every HTML Page
 

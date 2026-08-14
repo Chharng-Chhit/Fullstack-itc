@@ -1,0 +1,346 @@
+/* Day 5: Simple CSS for New Learners */
+
+/* 1. Basic page style */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 2. Header and navigation */
+.site-header {
+    padding: 15px 0;
+    border-bottom: 1px solid #cbd5e1;
+    background-color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1e293b;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.brand-mark {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #047857;
+    color: #ffffff;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 5px;
+    color: #475569;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+a:focus {
+    outline: 3px solid #0ea5e9;
+}
+
+/* 3. Hero section */
+.hero {
+    padding: 50px 0;
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero h1 {
+    margin: 5px 0 10px;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 0;
+    color: #e2e8f0;
+}
+
+.eyebrow {
+    margin: 0;
+    color: #047857;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero .eyebrow {
+    color: #6ee7b7;
+}
+
+.primary-button {
+    width: 150px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #047857;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.primary-button:hover {
+    background-color: #065f46;
+}
+
+/* 4. Main sections */
+.page-section {
+    padding: 40px 0;
+}
+
+.section-surface {
+    background-color: #e2e8f0;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin: 5px 0;
+    font-size: 28px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: #475569;
+}
+
+/* 5. Grid layouts: one column on mobile */
+.dashboard-grid,
+.product-grid,
+.category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/* 6. Dashboard cards */
+.summary-card {
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    border-top: 4px solid #047857;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.warning-card {
+    border-top-color: #b45309;
+}
+
+.card-label,
+.card-note {
+    margin: 0;
+    color: #475569;
+}
+
+.card-value {
+    margin: 8px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.positive {
+    color: #047857;
+}
+
+.warning {
+    color: #b45309;
+    font-weight: bold;
+}
+
+/* 7. Product cards */
+.product-card {
+    overflow: hidden;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.product-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-content {
+    padding: 20px;
+}
+
+.product-content h3 {
+    margin: 15px 0 5px;
+}
+
+.product-content p {
+    margin: 0;
+    color: #475569;
+}
+
+.product-topline,
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.category,
+.status {
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.category {
+    background-color: #e2e8f0;
+}
+
+.in-stock {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.low-stock {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.out-stock {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.product-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #cbd5e1;
+}
+
+.product-footer span {
+    color: #475569;
+}
+
+.text-link {
+    color: #047857;
+    font-weight: bold;
+}
+
+/* 8. Category cards */
+.category-grid article {
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.category-grid h3,
+.category-grid p {
+    margin: 0;
+}
+
+.category-grid p {
+    color: #475569;
+}
+
+/* 9. Footer */
+.site-footer {
+    padding: 30px 0;
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-content p {
+    margin: 5px 0 0;
+}
+
+/* 10. Tablet: two cards in each row */
+@media (min-width: 600px) {
+    .navigation {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-content,
+    .footer-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .dashboard-grid,
+    .product-grid,
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 11. Desktop: four cards in each row */
+@media (min-width: 900px) {
+    .dashboard-grid,
+    .product-grid,
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+}

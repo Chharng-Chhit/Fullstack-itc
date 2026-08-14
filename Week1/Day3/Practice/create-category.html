@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Category - Day 3 TP</title>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <img src="https://placehold.co/150x50/0f172a/38bdf8?text=ShopHub+Logo" alt="ShopHub Logo" width="150"
+            height="50">
+
+        <h1>Create Category Form</h1>
+        <p>Practice a smaller form for adding product categories.</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Product List</a></li>
+                <li><a href="create-product.html">Create Product</a></li>
+                <li><a href="create-category.html">Create Category</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Category Create Form -->
+    <main>
+        <section>
+            <h2>Category Information</h2>
+
+            <form>
+                <p>
+                    <label for="category-name">Category Name</label><br>
+                    <input type="text" id="category-name" name="category_name" placeholder="Enter category name"
+                        required>
+                </p>
+
+                <p>
+                    <label for="category-code">Category Code</label><br>
+                    <input type="text" id="category-code" name="category_code" placeholder="Example: CAT-001">
+                </p>
+
+                <p>
+                    <label for="parent-category">Parent Category</label><br>
+                    <select id="parent-category" name="parent_category">
+                        <option value="">No Parent Category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="home-living">Home &amp; Living</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="category-description">Description</label><br>
+                    <textarea id="category-description" name="category_description" rows="5" cols="40"
+                        placeholder="Write a short category description"></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Save Category</button>
+                    <button type="reset">Clear Form</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Student Practice</h2>
+            <ol>
+                <li>Add a new select option named Beauty.</li>
+                <li>Add one new input for category image URL.</li>
+                <li>Test the required Category Name field in the browser.</li>
+            </ol>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Fullstack ITC Practice. HTML Foundation.</p>
+        <p>
+            <a href="product-list.html">Product List</a> |
+            <a href="create-product.html">Create Product</a> |
+            <a href="create-category.html">Create Category</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Category - Day 4 TP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://placehold.co/150x50/0f172a/38bdf8?text=ShopHub+Logo" alt="ShopHub Logo" width="150" height="50">
+        <h1>Create Category</h1>
+        <p>The same stylesheet gives every project page a consistent theme.</p>
+        <nav aria-label="Main navigation"><ul><li><a href="index.html">Product List</a></li><li><a href="create-product.html">Create Product</a></li><li><a href="create-category.html">Create Category</a></li></ul></nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Category Information</h2>
+            <form>
+                <div class="form-group"><label for="category-name">Category Name</label><input type="text" id="category-name" name="category_name" placeholder="Enter category name" required></div>
+                <div class="form-group"><label for="category-code">Category Code</label><input type="text" id="category-code" name="category_code" placeholder="Example: CAT-001"></div>
+                <div class="form-group"><label for="parent-category">Parent Category</label><select id="parent-category" name="parent_category"><option value="">No Parent Category</option><option value="electronics">Electronics</option><option value="fashion">Fashion</option><option value="home-living">Home &amp; Living</option><option value="beauty">Beauty</option></select></div>
+                <div class="form-group"><label for="category-image">Category Image URL</label><input type="url" id="category-image" name="category_image" placeholder="https://example.com/image.jpg"></div>
+                <div class="form-group"><label for="category-description">Description</label><textarea id="category-description" name="category_description" rows="5" placeholder="Write a short category description"></textarea></div>
+                <button type="submit">Save Category</button><button type="reset">Clear Form</button>
+            </form>
+        </section>
+
+        <section class="student-practice">
+            <h2>Student Practice</h2>
+            <ol><li>Give this form a new class name.</li><li>Use the class selector to change only this form's background.</li><li>Change the button border radius.</li><li>Confirm all three pages still share the same theme.</li></ol>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 Fullstack ITC Practice. CSS Foundation.</p><p><a href="index.html">Product List</a> | <a href="create-product.html">Create Product</a> | <a href="create-category.html">Create Category</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List - Day 4 TP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://placehold.co/150x50/0f172a/38bdf8?text=ShopHub+Logo" alt="ShopHub Logo" width="150" height="50">
+        <h1>ShopHub Product List</h1>
+        <p>A product table styled with one external CSS file.</p>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Product List</a></li>
+                <li><a href="create-product.html">Create Product</a></li>
+                <li><a href="create-category.html">Create Category</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sample Products</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th><th>Image</th><th>Product Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td><td><img class="product-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;w=100&amp;h=80&amp;q=80" alt="Wireless headphones" width="100" height="80"></td><td>Wireless Headphones</td><td>Electronics</td><td>$99.99</td><td>25</td><td class="status-available">Available</td><td><a href="#">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td><td><img class="product-image" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&amp;fit=crop&amp;w=100&amp;h=80&amp;q=80" alt="Smart fitness watch" width="100" height="80"></td><td>Smart Fitness Watch</td><td>Electronics</td><td>$149.99</td><td>12</td><td class="status-available">Available</td><td><a href="#">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td><td><img class="product-image" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&amp;fit=crop&amp;w=100&amp;h=80&amp;q=80" alt="Laptop backpack" width="100" height="80"></td><td>Laptop Backpack</td><td>Fashion</td><td>$49.99</td><td>40</td><td class="status-available">Available</td><td><a href="#">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td><td><img class="product-image" src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&amp;fit=crop&amp;w=100&amp;h=80&amp;q=80" alt="Desk lamp" width="100" height="80"></td><td>Desk Lamp</td><td>Home &amp; Living</td><td>$24.99</td><td>0</td><td class="status-out">Out of Stock</td><td><a href="#">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="student-practice">
+            <h2>Student Practice</h2>
+            <ol>
+                <li>Change the table heading background to another theme color.</li>
+                <li>Add a fifth product row and observe the alternating row color.</li>
+                <li>Create a class for Low Stock and apply an orange text color.</li>
+                <li>Increase the cell padding and compare the spacing.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fullstack ITC Practice. CSS Foundation.</p>
+        <p><a href="index.html">Product List</a> | <a href="create-product.html">Create Product</a> | <a href="create-category.html">Create Category</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockFlow Inventory Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container navigation">
+            <a class="brand" href="index.html" aria-label="StockFlow home">
+                <span class="brand-mark" aria-hidden="true">SF</span>
+                <span>StockFlow</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a class="active" href="#dashboard" aria-current="page">Dashboard</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="dashboard">
+            <div class="container hero-content">
+                <div>
+                    <p class="eyebrow">Inventory dashboard</p>
+                    <h1>Manage your store inventory with confidence</h1>
+                    <p class="hero-text">Review stock levels, product categories, and inventory value from one responsive dashboard.</p>
+                </div>
+                <a class="primary-button" href="#products">View products</a>
+            </div>
+        </section>
+
+        <section class="page-section container" aria-labelledby="overview-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Today at a glance</p>
+                    <h2 id="overview-title">Inventory overview</h2>
+                </div>
+                <p>Last updated: 14-Aug-2026</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <article class="summary-card">
+                    <p class="card-label">Total products</p>
+                    <p class="card-value">128</p>
+                    <p class="card-note positive">12 added this month</p>
+                </article>
+
+                <article class="summary-card">
+                    <p class="card-label">Categories</p>
+                    <p class="card-value">8</p>
+                    <p class="card-note">Across the full catalog</p>
+                </article>
+
+                <article class="summary-card warning-card">
+                    <p class="card-label">Low stock</p>
+                    <p class="card-value">6</p>
+                    <p class="card-note warning">Needs attention</p>
+                </article>
+
+                <article class="summary-card">
+                    <p class="card-label">Inventory value</p>
+                    <p class="card-value">$18,450</p>
+                    <p class="card-note positive">5.2% above last month</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="page-section section-surface" id="products" aria-labelledby="products-title">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Popular items</p>
+                        <h2 id="products-title">Product collection</h2>
+                    </div>
+                    <a class="text-link" href="#products">View all products</a>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=80" alt="Black wireless headphones" width="600" height="400">
+                        <div class="product-content">
+                            <div class="product-topline">
+                                <span class="category">Electronics</span>
+                                <span class="status in-stock">In stock</span>
+                            </div>
+                            <h3>Wireless Headphones</h3>
+                            <p>Clear sound with a comfortable over-ear design.</p>
+                            <div class="product-footer">
+                                <strong>$99.99</strong>
+                                <span>25 units</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=80" alt="Silver smart fitness watch" width="600" height="400" loading="lazy">
+                        <div class="product-content">
+                            <div class="product-topline">
+                                <span class="category">Electronics</span>
+                                <span class="status low-stock">Low stock</span>
+                            </div>
+                            <h3>Smart Fitness Watch</h3>
+                            <p>Track daily activity, time, and fitness goals.</p>
+                            <div class="product-footer">
+                                <strong>$149.99</strong>
+                                <span>5 units</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=80" alt="Brown laptop backpack" width="600" height="400" loading="lazy">
+                        <div class="product-content">
+                            <div class="product-topline">
+                                <span class="category">Fashion</span>
+                                <span class="status in-stock">In stock</span>
+                            </div>
+                            <h3>Laptop Backpack</h3>
+                            <p>Organized storage for work, school, and travel.</p>
+                            <div class="product-footer">
+                                <strong>$49.99</strong>
+                                <span>40 units</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=80" alt="Modern desk lamp" width="600" height="400" loading="lazy">
+                        <div class="product-content">
+                            <div class="product-topline">
+                                <span class="category">Home &amp; Living</span>
+                                <span class="status out-stock">Out of stock</span>
+                            </div>
+                            <h3>Modern Desk Lamp</h3>
+                            <p>Focused lighting for a clean and productive desk.</p>
+                            <div class="product-footer">
+                                <strong>$24.99</strong>
+                                <span>0 units</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section container" id="categories" aria-labelledby="categories-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Browse the catalog</p>
+                    <h2 id="categories-title">Product categories</h2>
+                </div>
+            </div>
+
+            <div class="category-grid">
+                <article><h3>Electronics</h3><p>54 products</p></article>
+                <article><h3>Fashion</h3><p>31 products</p></article>
+                <article><h3>Home &amp; Living</h3><p>27 products</p></article>
+                <article><h3>Office</h3><p>16 products</p></article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="about">
+        <div class="container footer-content">
+            <div>
+                <strong>StockFlow Inventory</strong>
+                <p>Week 1 responsive static project.</p>
+            </div>
+            <p>&copy; 2026 Fullstack ITC</p>
+        </div>
+    </footer>
+</body>
+</html>

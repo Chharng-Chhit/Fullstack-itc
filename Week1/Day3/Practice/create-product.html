@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product - Day 3 TP</title>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <img src="https://placehold.co/150x50/0f172a/38bdf8?text=ShopHub+Logo" alt="ShopHub Logo" width="150"
+            height="50">
+
+        <h1>Create Product Form</h1>
+        <p>Practice form labels, inputs, select, textarea, placeholders, and buttons.</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Product List</a></li>
+                <li><a href="create-product.html">Create Product</a></li>
+                <li><a href="create-category.html">Create Category</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Product Create Form -->
+    <main>
+        <section>
+            <h2>Product Information</h2>
+
+            <form>
+                <p>
+                    <label for="product-name">Product Name</label><br>
+                    <input type="text" id="product-name" name="product_name" placeholder="Enter product name" required>
+                </p>
+
+                <p>
+                    <label for="product-code">Product Code</label><br>
+                    <input type="text" id="product-code" name="product_code" placeholder="Example: PRD-001">
+                </p>
+
+                <p>
+                    <label for="category">Category</label><br>
+                    <select id="category" name="category" required>
+                        <option value="">-- Select Category --</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="home-living">Home &amp; Living</option>
+                        <option value="books">Books</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="price">Price</label><br>
+                    <input type="number" id="price" name="price" placeholder="Enter price" min="0" step="0.01" required>
+                </p>
+
+                <p>
+                    <label for="stock">Stock Quantity</label><br>
+                    <input type="number" id="stock" name="stock" placeholder="Enter stock quantity" min="0" required>
+                </p>
+
+                <p>
+                    <label for="status">Status</label><br>
+                    <select id="status" name="status">
+                        <option value="available">Available</option>
+                        <option value="low-stock">Low Stock</option>
+                        <option value="out-of-stock">Out of Stock</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="description">Description</label><br>
+                    <textarea id="description" name="description" rows="5" cols="40"
+                        placeholder="Write a short product description"></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Save Product</button>
+                    <button type="reset">Clear Form</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Browser Test Checklist</h2>
+            <ol>
+                <li>Click inside each input and type sample data.</li>
+                <li>Choose a category from the select box.</li>
+                <li>Type a product description in the textarea.</li>
+                <li>Click Clear Form and confirm all fields are reset.</li>
+                <li>Click Save Product and observe the browser validation for required fields.</li>
+            </ol>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Fullstack ITC Practice. HTML Foundation.</p>
+        <p>
+            <a href="product-list.html">Product List</a> |
+            <a href="create-product.html">Create Product</a> |
+            <a href="create-category.html">Create Category</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

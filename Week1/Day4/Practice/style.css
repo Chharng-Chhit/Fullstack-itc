@@ -1,0 +1,212 @@
+/* Day 4 TP: CSS Basic Styling */
+
+/* 1. Element selector and project-wide defaults */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 2. Group selector */
+header,
+main,
+footer {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 28px 0 20px;
+}
+
+header img {
+    border-radius: 6px;
+}
+
+h1,
+h2 {
+    color: #0f172a;
+}
+
+h1 {
+    margin: 12px 0 4px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* 3. Navigation and link selectors */
+nav ul {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+}
+
+a {
+    color: #0369a1;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #075985;
+    text-decoration: underline;
+}
+
+nav a,
+.button-link {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 5px;
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+nav a:hover,
+.button-link:hover {
+    background-color: #0369a1;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* 4. Content cards demonstrate margin, padding, and border */
+section {
+    margin-bottom: 24px;
+    padding: 24px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.student-practice {
+    border-left: 5px solid #f59e0b;
+    background-color: #fffbeb;
+}
+
+/* 5. Table styling */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d5e1ed;
+}
+
+.product-image {
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.status-available {
+    color: #166534;
+    font-weight: bold;
+}
+
+.status-out {
+    color: #b91c1c;
+    font-weight: bold;
+}
+
+/* 6. Form styling */
+form {
+    max-width: 650px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0f172a;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #94a3b8;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #1e293b;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0284c7;
+    outline: 2px solid #bae6fd;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin: 0 8px 8px 0;
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #0284c7;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0369a1;
+}
+
+button[type="reset"] {
+    background-color: #64748b;
+}
+
+/* 7. Footer */
+footer {
+    padding: 8px 0 28px;
+    color: #475569;
+    text-align: center;
+}
+
+footer p {
+    margin: 6px 0;
+}

@@ -1,6 +1,6 @@
-# Day 5 TP: CSS Layout and Responsive Design
+# Week 2 Day 2 TP: CSS Layout and Responsive Design
 
-**Date:** 14-Aug-2026  
+**Date:** 18-Aug-2026  
 **CLO1:** Create basic project pages using HTML, CSS, and JavaScript foundation.  
 **Chapter:** CSS Layout and Responsive Design  
 **Material:** CSS Foundation
@@ -14,7 +14,7 @@ A responsive static inventory website containing:
 - A responsive product card layout with images
 - A product category layout
 - Mobile, tablet, and desktop styles
-- The completed Week 1 static project
+- The completed Week 2 Day 2 responsive CSS project
 
 ## Starter Files
 

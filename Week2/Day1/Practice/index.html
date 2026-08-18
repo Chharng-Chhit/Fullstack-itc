@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Properties by Section</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page-container site-header-content">
+            <a class="brand" href="#top">StockFlow CSS Lab</a>
+            <nav aria-label="CSS section navigation">
+                <ul class="nav-list">
+                    <li><a href="#selectors">Selectors</a></li>
+                    <li><a href="#box-model">Box model</a></li>
+                    <li><a href="#layout">Layout</a></li>
+                    <li><a href="#responsive">Responsive</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="page-container">
+                <p class="eyebrow">Week 2 Day 1 CSS Foundation</p>
+                <h1>CSS Properties by Section</h1>
+                <p>Change one CSS value, refresh the page, and observe what it controls.</p>
+            </div>
+        </section>
+
+        <section id="selectors" class="lesson-section page-container">
+            <h2>1. Syntax and Selectors</h2>
+            <p>A selector chooses an HTML element. A property names the style. A value sets the style.</p>
+            <div class="demo-grid two-columns">
+                <article class="demo-card selector-card"><h3>Class selector</h3><p>This card uses <code>.selector-card</code>.</p></article>
+                <article id="id-demo" class="demo-card"><h3>ID selector</h3><p>This card uses <code>#id-demo</code>.</p></article>
+            </div>
+            <p><a class="demo-link" href="#selectors">Hover or focus this link</a> to see a pseudo-class.</p>
+        </section>
+
+        <section id="colors" class="lesson-section shaded-section">
+            <div class="page-container">
+                <h2>2. Colors</h2>
+                <p><code>color</code> changes text. <code>background-color</code> changes the area behind content.</p>
+                <div class="color-grid">
+                    <div class="color-swatch color-blue">Hex color</div>
+                    <div class="color-swatch color-green">Named color</div>
+                    <div class="color-swatch color-transparent">Opacity example</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="backgrounds" class="lesson-section page-container">
+            <h2>3. Backgrounds</h2>
+            <div class="background-demo"><strong>Background demo</strong><span>Try repeat, position, and size.</span></div>
+            <p class="small-note">The demo uses <code>background-color</code>, <code>background-image</code>, <code>background-repeat</code>, and <code>background-position</code>.</p>
+        </section>
+
+        <section id="fonts" class="lesson-section shaded-section">
+            <div class="page-container">
+                <h2>4. Fonts</h2>
+                <div class="demo-grid three-columns">
+                    <article class="demo-card font-family-demo"><h3>Font family</h3><p>Arial is a simple sans-serif font.</p></article>
+                    <article class="demo-card font-size-demo"><h3>Font size</h3><p>This text is larger.</p></article>
+                    <article class="demo-card font-weight-demo"><h3>Font weight</h3><p>This text is bold.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="text" class="lesson-section page-container">
+            <h2>5. Text Alignment and Spacing</h2>
+            <div class="text-demo">
+                <p class="center-text">Centered text using <code>text-align</code>.</p>
+                <p class="uppercase-text">text transform makes this uppercase.</p>
+                <p class="spaced-text">Letter spacing and line height make text easier to inspect.</p>
+            </div>
+        </section>
+
+        <section id="box-model" class="lesson-section shaded-section">
+            <div class="page-container">
+                <h2>6. Margins, Padding, Borders, and Box Sizing</h2>
+                <p>Content is surrounded by padding, border, and margin.</p>
+                <div class="box-model-demo"><strong>Content area</strong><span>Padding is inside this border.</span></div>
+            </div>
+        </section>
+
+        <section id="display" class="lesson-section page-container">
+            <h2>7. Display Values</h2>
+            <p class="display-block">Block</p>
+            <span class="display-inline">Inline</span>
+            <span class="display-inline-block">Inline-block</span>
+            <p class="display-hidden">This text is hidden with <code>display: none</code>.</p>
+        </section>
+
+        <section id="layout" class="lesson-section shaded-section">
+            <div class="page-container">
+                <h2>8. Flexbox</h2>
+                <div class="flex-demo"><span>Navigation</span><span>Products</span><span>Categories</span></div>
+                <h2>9. Grid</h2>
+                <div class="dashboard-demo"><article>Products<br><strong>128</strong></article><article>Low stock<br><strong>12</strong></article><article>Categories<br><strong>8</strong></article></div>
+            </div>
+        </section>
+
+        <section id="position" class="lesson-section page-container">
+            <h2>10. Position and Layer Order</h2>
+            <div class="position-card"><p>Product card</p><span class="stock-badge">In stock</span></div>
+        </section>
+
+        <section id="lists-tables" class="lesson-section shaded-section">
+            <div class="page-container">
+                <h2>11. Lists and Tables</h2>
+                <div class="demo-grid two-columns">
+                    <div class="demo-card"><h3>Categories</h3><ul class="category-list"><li>Stationery</li><li>Office</li><li>Electronics</li></ul></div>
+                    <div class="table-wrapper"><table><caption>Stock changes</caption><thead><tr><th>Product</th><th>Change</th><th>Status</th></tr></thead><tbody><tr><td>Notebook</td><td>+20</td><td>Available</td></tr><tr><td>Desk lamp</td><td>-4</td><td>Low stock</td></tr></tbody></table></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="outline-cursor" class="lesson-section page-container">
+            <h2>12. Outlines and Cursors</h2>
+            <button class="focus-button" type="button">Press Tab to focus me</button>
+            <p class="cursor-demo">Move the pointer over this text. The cursor uses <code>cursor: help</code>.</p>
+        </section>
+
+        <section id="dimensions" class="lesson-section shaded-section">
+            <div class="page-container">
+                <h2>13. Dimensions and Overflow</h2>
+                <div class="overflow-demo">This box has a fixed height and controlled overflow. Add more words to this element and observe what happens.</div>
+            </div>
+        </section>
+
+        <section id="columns" class="lesson-section page-container">
+            <h2>14. CSS Columns</h2>
+            <div class="columns-demo">StockFlow helps a shop record products, categories, prices, and stock amounts. Students can use this information to practise readable text layout. CSS columns split one block of text into more than one reading column.</div>
+        </section>
+
+        <section id="responsive" class="lesson-section responsive-section">
+            <div class="page-container">
+                <h2>15. Responsive Media Queries</h2>
+                <p>Resize the browser. The Grid and Flexbox layout changes at wider screen sizes.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><p>CSS Properties by Section — Product Inventory Practice</p></footer>
+</body>
+</html>

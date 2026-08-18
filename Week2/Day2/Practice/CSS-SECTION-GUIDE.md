@@ -1,4 +1,4 @@
-# Day 5 CSS Explanation for Each Section
+# Week 2 Day 2 CSS Explanation for Each Section
 
 This guide explains each numbered section in `style.css`. Read one section, change one value, save the file, and refresh `index.html` in the browser.
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+    /* div{
+        max-width: 1000px;
+        width: 80%;
+        margin: auto;
+        height: 800px;
+
+        background-color: red;
+    } */
+
+    .save-btn{
+        padding: 8px 10px;
+        font-weight: bold;
+        background-color: #0284C7;
+        color: white;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .save-btn:hover {
+        background-color: #056696;
+    }
+
+    input:focus {
+        background-color: red;
+    }
+
+    div{
+        font-family: "Koulen", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .parent {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        border: 2px solid black;
+
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+
+    }
+
+    .parent div {
+        width: 100px;
+        height: 100px;
+        background-color: #056696;
+        color: white;
+    }
+    
+</style>
+<body>
+    <button type="submit" class="save-btn">Save Product</button>
+
+    <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

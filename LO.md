@@ -168,12 +168,12 @@ Product list page and create product form
 
 Styled HTML project pages
 
-## Day 5 — 14-Aug-2026
+## Day 5 — 14-Aug-2026 (Moved to Week 2 Day 2)
 
 ### Course Session
 
 **CLO1:** Create basic project pages using HTML, CSS, and JavaScript foundation.
-**Chapter Title:** CSS Layout and Responsive Design
+**Chapter Title:** CSS Layout and Responsive Design — moved
 **Chapter Material:** CSS Foundation
 **Chapter Outline:**
 
@@ -183,17 +183,9 @@ Styled HTML project pages
 - Responsive design
 - Media query basics
 
-### TP Session
+### Schedule Note
 
-- Create responsive navigation bar
-- Create dashboard card layout
-- Create product card layout
-- Make project responsive for mobile
-- Submit Week 1 static project
-
-### Project Output
-
-Responsive static inventory website
+This lesson is moved to **Week 2 Day 2 — 18-Aug-2026**.
 
 # Week 02: JavaScript and Web Interaction
 
@@ -202,29 +194,59 @@ Responsive static inventory website
 ### Course Session
 
 **CLO1:** Create basic project pages using HTML, CSS, and JavaScript foundation.
-**Chapter Title:** JavaScript Basic Programming
-**Chapter Material:** JavaScript Foundation
+**Chapter Title:** CSS Properties by Section
+**Chapter Material:** CSS Foundation
 **Chapter Outline:**
 
-- What is JavaScript?
-- Connect JavaScript with HTML
-- Variables
-- Data types
-- Console output
+- CSS syntax: selectors, properties, and values
+- Colors and backgrounds
+- Fonts and text properties
+- Margins, padding, borders, and box sizing
+- Display, Flexbox, and Grid
+- Position, lists, tables, outlines, and cursor
+- Dimensions, overflow, columns, and media queries
 
 ### TP Session
 
-- Create script.js
-- Link JavaScript to project
-- Create product variables
-- Show product data in console
-- Practice simple calculation
+- Open the CSS properties reference page
+- Change one property in each section
+- Observe colors, text, spacing, borders, and layout
+- Test Flexbox, Grid, position, tables, and overflow
+- Test the page at mobile, tablet, and desktop widths
 
 ### Project Output
 
-Project connected with JavaScript
+CSS properties reference page for the inventory project
 
 ## Day 2 — 18-Aug-2026
+
+### Course Session
+
+**CLO1:** Create basic project pages using HTML, CSS, and JavaScript foundation.  
+**Chapter Title:** CSS Layout and Responsive Design  
+**Chapter Material:** CSS Foundation
+
+### Chapter Outline
+
+- Box model review
+- Flexbox
+- Grid
+- Responsive design
+- Media query basics
+
+### TP Session
+
+- Create a responsive navigation bar
+- Create dashboard and product card layouts
+- Use Flexbox and Grid
+- Test mobile, tablet, and desktop widths
+- Submit the responsive static inventory website
+
+### Project Output
+
+Responsive static inventory website
+
+## Day 3 — 19-Aug-2026
 
 ### Course Session
 
@@ -250,7 +272,7 @@ Project connected with JavaScript
 
 Basic product logic using JavaScript
 
-## Day 3 — 19-Aug-2026
+## Day 4 — 20-Aug-2026
 
 ### Course Session
 
@@ -276,7 +298,7 @@ Basic product logic using JavaScript
 
 Product list generated from JavaScript data
 
-## Day 4 — 20-Aug-2026
+## Day 5 — 21-Aug-2026
 
 ### Course Session
 
@@ -302,7 +324,7 @@ Product list generated from JavaScript data
 
 Interactive product list page
 
-## Day 5 — 21-Aug-2026
+## Next Lesson — Following available class
 
 ### Course Session
 

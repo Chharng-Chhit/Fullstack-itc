@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f7fb;
+    color: #252b36;
+    font-family: Arial, sans-serif;
+}
+
+.sign-in-card {
+    width: 90%;
+    max-width: 390px;
+    padding: 36px 30px 28px;
+    border: 1px solid #dce1e8;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(37, 43, 54, 0.08);
+}
+
+h1 {
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.form-introduction {
+    margin: 0 0 28px;
+    color: #7d8795;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d2d8e1;
+    border-radius: 5px;
+    font: inherit;
+}
+
+input:focus,
+button:focus,
+a:focus {
+    outline: 3px solid #a9c5ff;
+    outline-offset: 2px;
+}
+
+.form-options {
+    display: flex;
+    margin: 4px 0 24px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.9rem;
+}
+
+.remember-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+a {
+    color: #4c7ff0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #4c7ff0;
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #3769d6;
+}
+
+.create-account {
+    margin: 24px 0 0;
+    color: #7d8795;
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    .sign-in-card {
+        padding: 28px 20px 22px;
+    }
+
+    .form-options {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

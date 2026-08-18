@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockFlow CSS Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header"><div class="container navigation"><a class="brand" href="#top">StockFlow</a><nav aria-label="Main navigation"><ul class="nav-list"><li><a class="active" href="#dashboard">Dashboard</a></li><li><a href="#products">Products</a></li><li><a href="#categories">Categories</a></li></ul></nav></div></header>
+    <main id="top">
+        <section class="hero"><div class="container hero-content"><div><p class="eyebrow">CSS practice</p><h1>Product Inventory Management</h1><p>Use CSS to make stock information clear and readable.</p></div><a class="primary-button" href="#products">View products</a></div></section>
+        <section id="dashboard" class="section container"><h2>Dashboard</h2><div class="summary-grid"><article class="summary-card"><p class="label">Products</p><strong class="number">128</strong><p>Products in inventory</p></article><article class="summary-card"><p class="label">Low stock</p><strong class="number warning">12</strong><p>Products need attention</p></article><article class="summary-card"><p class="label">Categories</p><strong class="number">8</strong><p>Active categories</p></article></div></section>
+        <section id="products" class="section surface"><div class="container"><h2>Products</h2><div class="product-grid"><article class="product-card"><div class="product-image blue" role="img" aria-label="Blue notebook">Notebook</div><div class="product-content"><p class="label">Stationery</p><h3>Blue Notebook</h3><p class="description">A lined notebook for school and office notes.</p><div class="product-details"><strong>$4.50</strong><span>35 in stock</span></div></div></article><article class="product-card"><div class="product-image orange" role="img" aria-label="Orange desk lamp">Lamp</div><div class="product-content"><p class="label">Office</p><h3>Desk Lamp</h3><p class="description">A small lamp with adjustable light for a desk.</p><div class="product-details"><strong>$18.00</strong><span>9 in stock</span></div></div></article></div></div></section>
+        <section id="categories" class="section container"><h2>Categories and stock</h2><ul class="category-list"><li>Stationery</li><li>Office</li><li>Electronics</li></ul><div class="table-wrapper"><table><caption>Recent stock changes</caption><thead><tr><th>Product</th><th>Change</th><th>Status</th></tr></thead><tbody><tr><td>Blue Notebook</td><td>+20</td><td>Available</td></tr><tr><td>Desk Lamp</td><td>-4</td><td>Low stock</td></tr></tbody></table></div></section>
+    </main>
+    <footer class="footer"><p>Change the CSS and observe the result.</p></footer>
+</body>
+</html>

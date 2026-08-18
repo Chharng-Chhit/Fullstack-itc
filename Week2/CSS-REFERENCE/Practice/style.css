@@ -1,0 +1,272 @@
+/* 1. Syntax, selectors, colors, and box model */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f7fb;
+    color: #172033;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.site-header,
+.footer {
+    background-color: #172033;
+    color: #ffffff;
+}
+
+.hero {
+    padding: 40px 0;
+    background-color: #dcecff;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+.surface {
+    background-color: #e9eef6;
+}
+
+/* 2. Fonts and text */
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.15;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 8px;
+}
+
+.label,
+.eyebrow {
+    color: #1d5fbf;
+    font-size: .8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.number {
+    display: block;
+    font-size: 2rem;
+}
+
+.warning {
+    color: #b45309;
+}
+
+/* 3. Display, Flexbox, and Grid */
+.navigation,
+.nav-list,
+.hero-content,
+.product-details {
+    display: flex;
+}
+
+.navigation,
+.hero-content {
+    flex-direction: column;
+    gap: 16px;
+}
+
+.nav-list {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.summary-grid,
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.product-details {
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* 4. Links, borders, outlines, hover, and focus */
+a {
+    color: inherit;
+}
+
+.brand,
+.nav-list a,
+.primary-button {
+    text-decoration: none;
+}
+
+.brand {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.nav-list a {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 4px;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    background-color: #31517f;
+}
+
+a:focus {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+.primary-button {
+    width: fit-content;
+    padding: 10px 16px;
+    border-radius: 5px;
+    background-color: #1d5fbf;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.primary-button:hover {
+    background-color: #154a94;
+}
+
+/* 5. Margins, padding, backgrounds, and product dimensions */
+.summary-card,
+.product-card {
+    border: 1px solid #d6deeb;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.summary-card {
+    padding: 20px;
+}
+
+.product-card {
+    overflow: hidden;
+}
+
+.product-content {
+    padding: 18px;
+}
+
+.product-image {
+    min-height: 120px;
+    padding: 40px 20px;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.blue {
+    background-color: #3974d3;
+}
+
+.orange {
+    background-color: #d97706;
+}
+
+.description {
+    min-height: 48px;
+}
+
+/* 6. Lists, tables, overflow, and responsive images */
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.category-list li {
+    padding: 8px 12px;
+    border: 1px solid #b8c9e1;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #d6deeb;
+    text-align: left;
+}
+
+th {
+    background-color: #dcecff;
+}
+
+img,
+svg {
+    max-width: 100%;
+}
+
+.footer {
+    padding: 24px 0;
+    text-align: center;
+}
+
+/* 7. Media queries: mobile first, then wider screens */
+@media (min-width: 600px) {
+
+    .navigation,
+    .hero-content {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .summary-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+
+    .summary-grid,
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero {
+        padding: 64px 0;
+    }
+}

@@ -1,7 +1,7 @@
-# Day 5 Teaching Notes: CSS Layout and Responsive Design
+# Week 2 Day 2 Teaching Notes: CSS Layout and Responsive Design
 
-**Date:** 14-Aug-2026  
-**Course session:** Week 1, Day 5  
+**Date:** 18-Aug-2026  
+**Course session:** Week 2, Day 2  
 **CLO1:** Create basic project pages using HTML, CSS, and JavaScript foundation.  
 **Chapter title:** CSS Layout and Responsive Design  
 **Chapter material:** CSS Foundation
@@ -22,7 +22,7 @@ Students will be able to:
 6. Write basic `min-width` media queries.
 7. Make images and content adapt to the available screen width.
 8. Test a project at common mobile, tablet, and desktop widths.
-9. Submit a complete Week 1 responsive static project.
+9. Submit the Week 2 Day 2 responsive CSS project.
 
 ## Suggested Duration
 
@@ -36,7 +36,7 @@ Students will be able to:
 | Responsive design | 20 min | Viewport, flexible widths, images, and mobile-first CSS |
 | Media query basics | 20 min | Tablet and desktop breakpoints |
 | Independent TP | 40 min | Complete and personalize the inventory website |
-| Testing and submission | 20 min | Responsive checks and Week 1 submission |
+| Testing and submission | 20 min | Responsive checks and Week 2 Day 2 submission |
 
 **Total suggested time:** 225 minutes. Adjust the independent TP time to match the class schedule.
 
@@ -404,9 +404,9 @@ Test after every major layout change:
 9. Why are mobile styles written before tablet and desktop styles?
 10. How can you check for unwanted horizontal scrolling?
 
-## Week 1 Static Project Submission
+## Week 2 Day 2 CSS Project Submission
 
-Students submit a responsive static inventory website. The submission should demonstrate the Week 1 learning sequence:
+Students submit a responsive static inventory website. The submission should demonstrate the Week 2 Day 2 CSS lesson:
 
 - Semantic HTML structure
 - Product table and form knowledge from earlier sessions
@@ -440,4 +440,4 @@ Before leaving, each student should show:
 2. One Grid container.
 3. One media query.
 4. The project at mobile and desktop widths.
-5. The final Week 1 project folder ready for submission.
+5. The final Week 2 Day 2 project folder ready for submission.

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3 - Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 15px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            max-width: 350px;
+            padding: 9px;
+            margin-top: 4px;
+        }
+
+        button {
+            padding: 9px 12px;
+            margin: 15px 4px 5px 0;
+            cursor: pointer;
+        }
+
+        .error {
+            color: #b91c1c;
+            min-height: 18px;
+        }
+
+        .success {
+            color: #166534;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercise 3: Form Validation</h1>
+    <form id="student-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name">
+        <p id="name-error" class="error"></p>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="name@example.com">
+        <p id="email-error" class="error"></p>
+
+        <label for="goal">Practice goal</label>
+        <select id="goal">
+            <option value="">Choose one</option>
+            <option value="dom">DOM selection</option>
+            <option value="events">Events</option>
+        </select>
+        <p id="goal-error" class="error"></p>
+
+        <button type="submit">Validate</button>
+        <button type="button" id="fill-button">Fill example</button>
+        <button type="reset">Reset</button>
+        <p id="result" class="success"></p>
+    </form>
+
+    <script>
+        const form = document.querySelector("#student-form");
+        const result = document.querySelector("#result");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            document.querySelector("#name-error").textContent = "";
+            document.querySelector("#email-error").textContent = "";
+            document.querySelector("#goal-error").textContent = "";
+            result.textContent = "";
+            let valid = true;
+
+            if (document.querySelector("#name").value.trim() === "") {
+                document.querySelector("#name-error").textContent = "Name is required.";
+                valid = false;
+            }
+            if (!document.querySelector("#email").value.includes("@")) {
+                document.querySelector("#email-error").textContent = "Enter a valid email.";
+                valid = false;
+            }
+            if (document.querySelector("#goal").value === "") {
+                document.querySelector("#goal-error").textContent = "Choose a goal.";
+                valid = false;
+            }
+            if (valid) result.textContent = "Form submitted successfully!";
+        });
+
+        document.querySelector("#fill-button").addEventListener("click", function () {
+            document.querySelector("#name").value = "Alex Student";
+            document.querySelector("#email").value = "alex@example.com";
+            document.querySelector("#goal").value = "dom";
+        });
+    </script>
+</body>
+
+</html>

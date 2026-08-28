@@ -698,26 +698,29 @@ Responsive static inventory website
 ### Course Session
 
 **CLO1:** Create basic project pages using HTML, CSS, and JavaScript foundation.
-**Chapter Title:** Conditions, Loops, and Functions
-**Chapter Material:** JavaScript Foundation
+**Chapter Title:** HTML and Tailwind CSS Practice
+**Chapter Material:** CSS Foundation
 **Chapter Outline:**
 
-- Operators
-- If/else
-- Loops
-- Functions
-- Product stock logic
+- Colors, backgrounds, and borders
+- Small web page design
+- Flex layout
+- Grid layout
+- Responsive layout
+- Card component grid
 
 ### TP Session
 
-- Create product stock checker
-- Create price calculation function
-- Loop product names
-- Show stock status: Available / Low Stock / Out of Stock
+- Create color, background, and border examples
+- Create a small web page preview
+- Create a flex layout
+- Create a grid layout
+- Create responsive layout examples
+- Create a responsive card grid
 
 ### Project Output
 
-Basic product logic using JavaScript
+HTML and Tailwind CSS practice exercises
 
 ## Day 4 — 20-Aug-2026
 

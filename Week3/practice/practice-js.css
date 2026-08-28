@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #1f2937;
+}
+
+.page-header {
+    padding: 24px 16px;
+    text-align: center;
+    background: #1d4ed8;
+    color: white;
+}
+
+main {
+    width: 92%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #00000018;
+}
+
+h2 {
+    margin-top: 0;
+    color: #1d4ed8;
+}
+
+button {
+    margin: 6px 4px 6px 0;
+    padding: 9px 12px;
+    border: 0;
+    border-radius: 5px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background: #1e3a8a;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 5px 0 10px;
+    padding: 9px;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+}
+
+.topic-box {
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.topic-box.active {
+    border-color: #f59e0b;
+    background: #fef3c7;
+}
+
+.message {
+    min-height: 20px;
+    color: #166534;
+}
+
+.error {
+    min-height: 18px;
+    margin: 0 0 5px;
+    color: #b91c1c;
+}
+
+.board {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.drop-zone {
+    flex: 1;
+    min-width: 240px;
+    min-height: 180px;
+    padding: 12px;
+    border: 2px dashed #94a3b8;
+    border-radius: 6px;
+    background: #f8fafc;
+}
+
+.task {
+    padding: 10px;
+    background: #dbeafe;
+    border-radius: 5px;
+    cursor: grab;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    padding: 20px;
+    background: #00000099;
+}
+
+.modal.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 24px;
+    background: white;
+    border-radius: 8px;
+}
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #64748b;
+    font-size: 20px;
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 15px;
+    }
+
+    .board {
+        display: block;
+    }
+
+    .drop-zone {
+        margin-bottom: 16px;
+    }
+}

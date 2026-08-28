@@ -1,0 +1,1 @@
+import { divNum } from "./script";

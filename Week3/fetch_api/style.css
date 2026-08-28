@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef4ff;
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    background-color: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #087bb9;
+    border: 0;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 16px;
+}
+
+button:hover {
+    background-color: #05679c;
+}
+
+button:focus {
+    outline: 3px solid #f59e0b;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+input {
+    border: 1px solid #94a3b8;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px;
+    width: 100%;
+}
+
+pre {
+    background-color: #f1f5f9;
+    border-radius: 6px;
+    overflow-x: auto;
+    padding: 12px;
+}
+
+#message {
+    min-height: 24px;
+}
+
+.product-card {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding: 14px;
+}
+
+.product-card h2 {
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+
+.product-card p {
+    margin: 4px 0;
+}

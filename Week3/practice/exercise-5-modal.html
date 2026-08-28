@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5 - Modal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 15px;
+        }
+
+        button {
+            padding: 9px 12px;
+            cursor: pointer;
+        }
+
+        #modal {
+            display: none;
+            position: fixed;
+            inset: 10px;
+            background: #00000099;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #modal.open {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        #close-button {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercise 5: Modal</h1>
+    <button id="open-button">Open modal</button>
+    <p id="message">Modal is closed.</p>
+
+    <div id="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button id="close-button" aria-label="Close modal">X</button>
+            <h2 id="modal-title">Hello from the modal</h2>
+            <p>Close me with the button, overlay, or Escape key.</p>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.querySelector("#modal");
+        const message = document.querySelector("#message");
+
+        function closeModal() {
+            modal.classList.remove("open");
+            message.textContent = "Modal is closed.";
+        }
+
+        document.querySelector("#open-button").addEventListener("click", function () {
+            modal.classList.add("open");
+            message.textContent = "Modal is open.";
+        });
+
+        document.querySelector("#close-button").addEventListener("click", closeModal);
+        modal.addEventListener("click", function (event) {
+            if (event.target === modal) closeModal();
+        });
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") closeModal();
+        });
+    </script>
+</body>
+
+</html>

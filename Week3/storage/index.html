@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Storage Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        section {
+            border: 1px solid #cccccc;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 4px;
+            cursor: pointer;
+        }
+
+        pre {
+            background: #f2f2f2;
+            padding: 12px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Local Storage, Cookie, and Session Storage</h1>
+        <p>This example saves several products as JSON data in the browser.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. The data we will save</h2>
+            <p>JSON means text that follows a format for storing objects and arrays.</p>
+            <pre id="product-data"></pre>
+        </section>
+
+        <section>
+            <h2>2. localStorage</h2>
+            <p>localStorage keeps data after the browser is closed. It stays until we remove it.</p>
+            <button id="save-local-storage">Save products</button>
+            <button id="read-local-storage">Read products</button>
+            <button id="clear-local-storage">Clear products</button>
+            <pre id="local-storage-result">No action yet.</pre>
+        </section>
+
+        <section>
+            <h2>3. Cookie with an expiry time</h2>
+            <p>A cookie can have an expiry date. This example expires after 1 minute.</p>
+            <button id="save-cookie">Save products for 1 minute</button>
+            <button id="read-cookie">Read products</button>
+            <button id="clear-cookie">Clear products</button>
+            <pre id="cookie-result">No action yet.</pre>
+        </section>
+
+        <section>
+            <h2>4. sessionStorage</h2>
+            <p>sessionStorage keeps data while this browser tab is open. It is removed when the tab closes.</p>
+            <button id="save-session-storage">Save products</button>
+            <button id="read-session-storage">Read products</button>
+            <button id="clear-session-storage">Clear products</button>
+            <pre id="session-storage-result">No action yet.</pre>
+        </section>
+    </main>
+
+    <script>
+        // This is an array containing three product objects.
+        const products = [
+            { id: 1, name: "Keyboard", quantity: 10 },
+            { id: 2, name: "Mouse", quantity: 15 },
+            { id: 3, name: "Monitor", quantity: 5 }
+        ];
+
+        const productJson = JSON.stringify(products);
+        document.getElementById("product-data").textContent = productJson;
+
+        // localStorage example: save, read, and remove JSON text.
+        document.getElementById("save-local-storage").addEventListener("click", function () {
+            localStorage.setItem("products", productJson);
+            document.getElementById("local-storage-result").textContent = "Products saved in localStorage.";
+        });
+
+        document.getElementById("read-local-storage").addEventListener("click", function () {
+            const savedJson = localStorage.getItem("products");
+            const savedProducts = savedJson ? JSON.parse(savedJson) : [];
+            document.getElementById("local-storage-result").textContent = JSON.stringify(savedProducts, null, 2);
+        });
+
+        document.getElementById("clear-local-storage").addEventListener("click", function () {
+            localStorage.removeItem("products");
+            document.getElementById("local-storage-result").textContent = "localStorage was cleared.";
+        });
+
+        // Cookie example: max-age=60 means the cookie expires after 60 seconds.
+        document.getElementById("save-cookie").addEventListener("click", function () {
+            document.cookie = "products=" + encodeURIComponent(productJson) + "; max-age=60; path=/";
+            document.getElementById("cookie-result").textContent = "Cookie saved. It will expire in 1 minute.";
+        });
+
+        document.getElementById("read-cookie").addEventListener("click", function () {
+            const cookieParts = document.cookie.split("; ");
+            let savedJson = null;
+
+            for (const cookiePart of cookieParts) {
+                const [cookieName, cookieValue] = cookiePart.split("=");
+                if (cookieName === "products") {
+                    savedJson = decodeURIComponent(cookieValue);
+                }
+            }
+
+            const savedProducts = savedJson ? JSON.parse(savedJson) : [];
+            document.getElementById("cookie-result").textContent = JSON.stringify(savedProducts, null, 2);
+        });
+
+        document.getElementById("clear-cookie").addEventListener("click", function () {
+            document.cookie = "products=; max-age=0; path=/";
+            document.getElementById("cookie-result").textContent = "Cookie was cleared.";
+        });
+
+        // sessionStorage example: use the same setItem, getItem, and removeItem ideas.
+        document.getElementById("save-session-storage").addEventListener("click", function () {
+            sessionStorage.setItem("products", productJson);
+            document.getElementById("session-storage-result").textContent = "Products saved in sessionStorage.";
+        });
+
+        document.getElementById("read-session-storage").addEventListener("click", function () {
+            const savedJson = sessionStorage.getItem("products");
+            const savedProducts = savedJson ? JSON.parse(savedJson) : [];
+            document.getElementById("session-storage-result").textContent = JSON.stringify(savedProducts, null, 2);
+        });
+
+        document.getElementById("clear-session-storage").addEventListener("click", function () {
+            sessionStorage.removeItem("products");
+            document.getElementById("session-storage-result").textContent = "sessionStorage was cleared.";
+        });
+    </script>
+</body>
+</html>

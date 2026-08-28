@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-4 gap-4">
+  <div class="md:col-span-3 border border-black p-4 flex items-center justify-center">
+    1
+  </div>
+
+  <div class="md:col-start-1 md:row-start-2 md:row-span-2 border border-black p-4 flex items-center justify-center">
+    2
+  </div>
+
+  <div class="md:col-start-2 md:row-start-2 border border-black p-4 flex items-center justify-center">
+    3
+  </div>
+
+  <div class="md:col-start-2 md:row-start-3 border border-black p-4 flex items-center justify-center">
+    4
+  </div>
+
+  <div class="md:col-start-3 md:row-start-2 md:row-span-2 border border-black p-4 flex items-center justify-center">
+    5
+  </div>
+
+  <div class="md:col-span-3 md:row-start-4 border border-black p-4 flex items-center justify-center">
+    6
+  </div>
+</div>
+</body>
+</html>

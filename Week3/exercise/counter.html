@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .wrapper {
+        width: 300px;
+        margin: auto;
+        text-align: center;
+        background-color: gainsboro;
+        box-shadow: 0 0 10px rgb(235, 225, 135);
+        padding: 30px;
+    }
+    .number {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    .button button {
+        padding: 5px 10px;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="number" id="number">0</div>
+        <div class="button">
+            <button id="inc" onclick="incNumber()">+</button>
+            <button id="dec" onclick="decNumber()">-</button>
+            <button id="reset" onclick="resetNumber()">reset</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    const elementNumber = document.querySelector("#number");
+    const elementInc = document.querySelector("#inc");
+    const elementDec = document.querySelector("#dec");
+    const elementReset = document.querySelector("#reset");
+
+
+    let number = 0;
+    const incNumber = () => {
+        number += 1;
+        elementNumber.textContent = number;
+    }
+
+    const decNumber = () => {
+        number -= 1;
+        elementNumber.textContent = number;
+    }
+
+    const resetNumber = () => {
+        number = 0;
+        elementNumber.textContent = number;
+    }
+
+
+</script>
+</html>

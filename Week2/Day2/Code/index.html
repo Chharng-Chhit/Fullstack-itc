@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent {
+        width: 90%;
+        margin: auto;
+        /* height: 1000px; */
+        background-color: rgb(105, 205, 205);
+
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .child {
+        /* width: 300px; */
+        height: 300px;
+        border: 1px solid black;
+    }
+
+
+    @media only screen and (max-width: 700px){
+        .parent{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    img {
+        width: 50px;
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <img src="./icon.svg" alt="">
+
+</body>
+</html>

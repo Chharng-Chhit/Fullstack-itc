@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+<style>
+    body{
+        width: 400px;
+        height: 400px;
+        margin: auto;
+        margin-top: 50px;
+        border: 2px dashed gray;
+        overflow: auto;
+    }
+
+    body form {
+        margin: 40px 40px;
+    }
+    ul {
+        width: 90%;
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        gap: 4px;
+
+    }
+    li {
+        width: 90%;
+        background-color: rgb(224, 224, 224);
+        border-radius: 3px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    li > button {
+        width: 50px;
+        height: 20px;
+        margin-right: 20px;
+    }
+
+    li > p {
+        margin-left: 20px;
+    }
+</style>
+<body>
+    <form action="">
+        <input type="text" placeholder="Input Name" id="inputValue">
+        <button type="submit" id="addBtn" onclick="addData(event)">Add</button>
+    </form>
+
+    <ul id="listItem">
+        <li><p>Student 2</p> <button >Delete</button></li>
+        <li><p>Student 2</p> <button>Delete</button></li>
+        <li><p>Student 2</p> <button>Delete</button></li>
+    </ul>
+</body>
+
+<script>
+    const elementInput = document.querySelector("#inputValue");
+    const elementAdd = document.querySelector("#addBtn");
+    const elementListing = document.querySelector("#listItem");
+
+    let studentLists = [];
+    const render = () => {
+        // if(localStorage.studentList){
+        //     studentLists = JSON.parse(localStorage.studentList) 
+        // }
+
+        studentLists = JSON.parse(localStorage.studentList || "[]") 
+        let listingHTML = studentLists.map((student, index)=>{
+            return `<li><p>${student}</p> <button onclick="removeData(${index})">Delete</button></li>`;
+        }).join(" ");
+        console.log(listingHTML)
+        elementListing.innerHTML = listingHTML;
+    }
+    render();
+
+    const addData = (event) => {
+        event.preventDefault();
+        let newData = elementInput.value.trim();
+        if(newData){
+            studentLists.push(newData);
+            localStorage.setItem("studentList", JSON.stringify(studentLists))
+            elementInput.value = "";
+        }
+        render();
+    }
+
+    const removeData = (index) => {
+        studentLists.splice(index,1);
+        localStorage.setItem("studentList", JSON.stringify(studentLists))
+        render();
+    }
+</script>
+</html>

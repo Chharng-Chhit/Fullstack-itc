@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4 - Drag and Drop</title>
+    <style>
+        /* Make the page readable and keep it from becoming too wide. */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 15px;
+        }
+
+        /* Put the two drop zones next to each other. */
+        .board {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Style each area where a task can be placed. */
+        .zone {
+            flex: 1;
+            min-width: 250px;
+            min-height: 220px;
+            padding: 15px;
+            border: 2px dashed #777;
+        }
+
+        /* Style the draggable tasks. */
+        .task {
+            padding: 12px;
+            background: #dbeafe;
+            cursor: grab;
+        }
+
+        /* Add space and a mouse pointer to the button. */
+        button {
+            padding: 9px 12px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercise 4: Drag and Drop</h1>
+    <p>Drag a task from Backlog to Focus now.</p>
+    <!-- This container holds both drop zones. -->
+    <div class="board">
+        <!-- JavaScript finds this area using id="backlog". -->
+        <div class="zone" id="backlog">
+            <h2>Backlog</h2>
+        </div>
+
+        <!-- JavaScript finds this area using id="focus". -->
+        <div class="zone" id="focus">
+            <h2>Focus now</h2>
+        </div>
+    </div>
+    <button id="reset-button">Reset board</button>
+
+    <script>
+        // Find the Backlog HTML element and save it in a variable.
+        const backlog = document.querySelector("#backlog");
+
+        // Find the Focus HTML element and save it in a variable.
+        const focus = document.querySelector("#focus");
+
+        // Store the task names in an array.
+        const taskNames = ["Build selectors practice", "Refactor form errors", "Create modal close flow"];
+
+        // This variable will remember the task being dragged.
+        let draggedTask;
+
+        // This function creates all tasks inside the Backlog area.
+        function createTasks() {
+            // Start an HTML string with the Backlog heading.
+            let tasksHTML = "<h2>Backlog</h2>";
+
+            // Repeat the code once for every name in the taskNames array.
+            for (let i = 0; i < taskNames.length; i++) {
+                // Add one task to the HTML string.
+                tasksHTML += `<p class="task">${taskNames[i]}</p>`;
+            }
+
+            // innerHTML replaces the Backlog content with the complete HTML string.
+            backlog.innerHTML = tasksHTML;
+
+            // Find every task that was created.
+            const tasks = backlog.querySelectorAll(".task");
+
+            tasks.forEach(function (task) {
+
+                // Allow the user to drag this paragraph.
+                task.draggable = true;
+
+                // Run this function when the user starts dragging the task.
+                task.addEventListener("dragstart", function () { draggedTask = task; });
+
+                console.log(task)
+            });
+        }
+
+        // Use the same drag-and-drop code for both zones.
+        [backlog, focus].forEach(function (zone) {
+            // This event runs while a dragged task is over a zone.
+            zone.addEventListener("dragover", function (event) { event.preventDefault(); });
+
+            // This event runs when the user releases the dragged task.
+            zone.addEventListener("drop", function (event) {
+                // Allow the browser to accept the drop.
+                event.preventDefault();
+
+                // Only move the task if a task was selected.
+                if (draggedTask) zone.appendChild(draggedTask);
+            });
+        });
+
+        // Find the Reset button and listen for a click.
+        document.querySelector("#reset-button").addEventListener("click", function () {
+            // innerHTML removes the old tasks and adds the heading again.
+            focus.innerHTML = "<h2>Focus now</h2>";
+
+            // Create the original tasks again in Backlog.
+            createTasks();
+        });
+
+        // Run the function once when the page first opens.
+        createTasks();
+    </script>
+</body>
+
+</html>

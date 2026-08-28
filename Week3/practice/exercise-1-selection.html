@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - DOM Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 15px;
+        }
+
+        .card {
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .active {
+            color: white;
+            background: orange;
+            padding: 10px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px 3px 5px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercise 1: Select and Modify</h1>
+    <div class="card" id="topic-card">
+        <p>Previous topic</p>
+        <h2 id="target">DOM selection</h2>
+        <p>Next topic</p>
+    </div>
+    <button id="highlight-button">Highlight</button>
+    <button id="rename-button">Rename</button>
+    <button id="inspect-button">Inspect next element</button>
+    <button id="reset-button">Reset</button>
+    <p id="message">No action yet.</p>
+
+    <script>
+        const target = document.querySelector("#target");
+        const card = document.querySelector("#topic-card");
+        const message = document.querySelector("#message");
+
+        document.querySelector("#highlight-button").addEventListener("click", function () {
+            card.classList.toggle("active");
+            message.textContent = "The class was changed.";
+        });
+
+        document.querySelector("#rename-button").addEventListener("click", function () {
+            target.textContent = "Updated DOM title";
+            message.textContent = "The heading text was changed.";
+        });
+
+        document.querySelector("#inspect-button").addEventListener("click", function () {
+            message.textContent = "The next element says: " + target.nextElementSibling.textContent;
+        });
+
+        document.querySelector("#reset-button").addEventListener("click", function () {
+            target.textContent = "DOM selection";
+            card.classList.remove("active");
+            message.textContent = "Reset complete.";
+        });
+    </script>
+</body>
+
+</html>

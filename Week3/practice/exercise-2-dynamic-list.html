@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2 - Dynamic List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 15px;
+        }
+
+        input {
+            padding: 9px;
+            width: 250px;
+        }
+
+        button {
+            padding: 9px 12px;
+            margin: 5px 3px 5px 0;
+            cursor: pointer;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercise 2: Dynamic List</h1>
+    <label for="topic-input">New topic</label>
+    <input id="topic-input" placeholder="Example: closest()">
+    <button id="add-button">Add topic</button>
+    <button id="sample-button">Load samples</button>
+    <button id="clear-button">Clear list</button>
+    <ul id="topic-list"></ul>
+    <p id="message"></p>
+
+    <script>
+        const topics = ["querySelector", "classList"];
+        const list = document.querySelector("#topic-list");
+        const message = document.querySelector("#message");
+
+        function showTopics() {
+            list.textContent = "";
+            for (let i = 0; i < topics.length; i++) {
+                const item = document.createElement("li");
+                item.textContent = topics[i];
+                list.appendChild(item);
+            }
+            message.textContent = topics.length + " topics in the list.";
+        }
+
+        document.querySelector("#add-button").addEventListener("click", function () {
+            const input = document.querySelector("#topic-input");
+            if (input.value.trim() !== "") {
+                topics.push(input.value.trim());
+                input.value = "";
+                showTopics();
+            }
+        });
+
+        document.querySelector("#sample-button").addEventListener("click", function () {
+            topics.length = 0;
+            topics.push("querySelector", "querySelectorAll", "textContent", "classList");
+            showTopics();
+        });
+
+        document.querySelector("#clear-button").addEventListener("click", function () {
+            topics.length = 0;
+            showTopics();
+        });
+
+        showTopics();
+    </script>
+</body>
+
+</html>

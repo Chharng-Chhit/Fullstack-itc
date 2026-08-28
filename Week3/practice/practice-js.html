@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Practice</title>
+    <link rel="stylesheet" href="practice-js.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>JavaScript DOM Practice</h1>
+        <p>Click the buttons and watch the page change.</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>1. Select and Modify Elements</h2>
+            <div class="topic-box">
+                <p>First topic</p>
+                <h3 id="dom-target">DOM selection</h3>
+                <p>Next topic</p>
+            </div>
+            <button id="highlight-button">Highlight target</button>
+            <button id="rename-button">Rename target</button>
+            <button id="inspect-button">Inspect traversal</button>
+            <button id="reset-dom-button">Reset</button>
+            <p id="dom-message" class="message">No action yet.</p>
+        </section>
+
+        <section class="card">
+            <h2>2. Create a Dynamic List</h2>
+            <label for="topic-input">New topic</label>
+            <input id="topic-input" type="text" placeholder="Example: closest()">
+            <button id="add-topic-button">Add topic</button>
+            <button id="sample-button">Load samples</button>
+            <button id="clear-list-button">Clear list</button>
+            <ul id="topic-list">
+                <li>querySelector</li>
+                <li>classList</li>
+            </ul>
+            <p id="list-message" class="message">2 topics loaded.</p>
+        </section>
+
+        <section class="card">
+            <h2>3. Validate a Form</h2>
+            <form id="practice-form" novalidate>
+                <label for="student-name">Name</label>
+                <input id="student-name" name="name" type="text" placeholder="Student name">
+                <p id="name-error" class="error"></p>
+
+                <label for="student-email">Email</label>
+                <input id="student-email" name="email" type="email" placeholder="name@example.com">
+                <p id="email-error" class="error"></p>
+
+                <label for="practice-goal">Practice goal</label>
+                <select id="practice-goal" name="goal">
+                    <option value="">Choose a goal</option>
+                    <option value="selection">DOM selection</option>
+                    <option value="forms">Form validation</option>
+                    <option value="events">Events</option>
+                </select>
+                <p id="goal-error" class="error"></p>
+
+                <button type="submit">Validate form</button>
+                <button type="button" id="prefill-button">Prefill valid data</button>
+                <button type="button" id="reset-form-button">Reset</button>
+                <p id="form-message" class="message"></p>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>4. Drag and Drop</h2>
+            <p>Drag a task from Backlog to Focus now.</p>
+            <div class="board">
+                <div class="drop-zone" id="backlog-zone">
+                    <h3>Backlog</h3>
+                    <p class="task" draggable="flase">Build selectors practice</p>
+                    <p class="task" draggable="true">Refactor form errors</p>
+                    <p class="task" draggable="true">Create modal close flow</p>
+                </div>
+                <div class="drop-zone" id="focus-zone">
+                    <h3>Focus now</h3>
+                </div>
+            </div>
+            <button id="reset-board-button">Reset board</button>
+        </section>
+
+        <section class="card">
+            <h2>5. Create a Modal</h2>
+            <button id="open-modal-button">Open modal</button>
+            <p id="modal-message" class="message">Modal is closed.</p>
+        </section>
+    </main>
+
+    <div id="practice-modal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button id="close-modal-button" class="close-button" aria-label="Close modal">&times;</button>
+            <h2 id="modal-title">Practice complete</h2>
+            <p>You opened a modal by changing its class and aria-hidden attribute.</p>
+        </div>
+    </div>
+
+    <script src="practice-js.js"></script>
+</body>
+</html>

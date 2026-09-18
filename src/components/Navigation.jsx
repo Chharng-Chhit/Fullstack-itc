@@ -4,6 +4,7 @@ import {
   AppstoreOutlined,
   HomeOutlined,
   PlusCircleOutlined,
+  ShopOutlined,
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons'
@@ -31,7 +32,12 @@ function Navigation({ isCollapsed }) {
     {
       key: '/users',
       icon: <UserOutlined />,
-      label: 'Users'
+      label: 'Users',
+    },
+    {
+      key: '/shop',
+      icon: <ShopOutlined />,
+      label: 'Shop',
     },
     {
       key: 'team-group',

@@ -28,7 +28,7 @@ const columns = [
     title: 'Action',
     key: 'action',
     render: (_, record) => (
-        <Space split={<Divider type="vertical" />}>
+        <Space >
             <Link onClick={() => handleView(record)}>View</Link>
             <Link onClick={() => handleEdit(record)}>Update</Link>
             <Link type="danger" onClick={() => handleDelete(record)}>Delete</Link>

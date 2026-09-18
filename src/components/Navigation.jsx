@@ -29,6 +29,11 @@ function Navigation({ isCollapsed }) {
       label: 'Add product',
     },
     {
+      key: '/users',
+      icon: <UserOutlined />,
+      label: 'Users'
+    },
+    {
       key: 'team-group',
       icon: <TeamOutlined />,
       label: 'Team',

@@ -10,6 +10,7 @@ import NotFoundPage from './pages/NotFoundPage.jsx'
 import TeamOnePage from './pages/TeamOnePage.jsx'
 import TeamTwoPage from './pages/TeamTwoPage.jsx'
 import TeamLayout from './pages/TeamLayout.jsx'
+import UserPage from './pages/UserPage.jsx'
 
 const { Header, Content, Sider, Footer } = Layout
 const { Text } = Typography
@@ -23,6 +24,7 @@ function App() {
   const breadcrumbMap = {
     '/': ['Overview'],
     '/products': ['Products'],
+    '/users': ['Users'],
     '/add-product': ['Add Product'],
     '/team': ['Team'],
     '/team/team-1': ['Team', 'Team 1'],
@@ -111,6 +113,7 @@ function App() {
               <Route path="/" element={<HomePage products={products} />} />
               <Route path="/products" element={<ProductsPage products={products} />} />
               <Route path="/add-product" element={<AddProductPage onAddProduct={addProduct} />} />
+              <Route path="/users" element={<UserPage />} />
               <Route path="/team" element={<TeamLayout />}>
                 <Route index element={<p>Select Team 1 or Team 2 from the sidebar.</p>} />
                 <Route path="team-1" element={<TeamOnePage />} />

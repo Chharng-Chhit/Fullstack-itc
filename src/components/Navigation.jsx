@@ -1,11 +1,13 @@
 import { useLocation, useNavigate } from 'react-router'
 import { Menu } from 'antd'
+import ITCLogo from '/src/assets/image/itc.png'
 import {
   AppstoreOutlined,
+  CreditCardOutlined,
   HomeOutlined,
-  PlusCircleOutlined,
-  ShopOutlined,
-  TeamOutlined,
+  InboxOutlined,
+  ShoppingCartOutlined,
+  TagsOutlined,
   UserOutlined,
 } from '@ant-design/icons'
 
@@ -17,7 +19,7 @@ function Navigation({ isCollapsed }) {
     {
       key: '/',
       icon: <HomeOutlined />,
-      label: 'Overview',
+      label: 'Dashboard',
     },
     {
       key: '/products',
@@ -25,9 +27,29 @@ function Navigation({ isCollapsed }) {
       label: 'Products',
     },
     {
-      key: '/add-product',
-      icon: <PlusCircleOutlined />,
-      label: 'Add product',
+      key: '/categories',
+      icon: <TagsOutlined />,
+      label: 'Categories',
+    },
+    {
+      key: '/sales',
+      icon: <ShoppingCartOutlined />,
+      label: 'Sales',
+    },
+    {
+      key: '/sale-items',
+      icon: <AppstoreOutlined />,
+      label: 'Sale items',
+    },
+    {
+      key: '/payments',
+      icon: <CreditCardOutlined />,
+      label: 'Payments',
+    },
+    {
+      key: '/stock-movements',
+      icon: <InboxOutlined />,
+      label: 'Stock movements',
     },
     {
       key: '/users',
@@ -35,27 +57,10 @@ function Navigation({ isCollapsed }) {
       label: 'Users',
     },
     {
-      key: '/shop',
-      icon: <ShopOutlined />,
-      label: 'Shop',
-    },
-    {
-      key: 'team-group',
-      icon: <TeamOutlined />,
-      label: 'Team',
-      children: [
-        {
-          key: '/team/team-1',
-          icon: <UserOutlined />,
-          label: 'Team 1',
-        },
-        {
-          key: '/team/team-2',
-          icon: <UserOutlined />,
-          label: 'Team 2',
-        },
-      ],
-    },
+      key: '/new-pages',
+      icon: <UserOutlined />,
+      label: "New Page"
+    }
   ]
 
   // Find active key based on current pathname
@@ -70,8 +75,10 @@ function Navigation({ isCollapsed }) {
   return (
     <div className="nav-container">
       <div className="brand" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-        <span className="brand-mark">S</span>
-        {!isCollapsed && <span className="nav-label">Stock Starter</span>}
+        <span className="brand-mark">
+          <img src={ITCLogo} alt="logo" />
+        </span>
+        {!isCollapsed && <span className="nav-label">POS Manager</span>}
       </div>
       <Menu
         theme="dark"

@@ -11,20 +11,22 @@ function MainLayout() {
   const location = useLocation()
 
   const breadcrumbMap = {
-    '/': ['Overview'],
+    '/': ['Dashboard'],
     '/products': ['Products'],
+    '/categories': ['Categories'],
     '/users': ['Users'],
-    '/add-product': ['Add Product'],
-    '/team': ['Team'],
-    '/team/team-1': ['Team', 'Team 1'],
-    '/team/team-2': ['Team', 'Team 2'],
+    '/sales': ['Sales'],
+    '/sale-items': ['Sale items'],
+    '/payments': ['Payments'],
+    '/new-pages': ['New Pages'],
+    '/stock-movements': ['Stock movements'],
   }
 
-  const currentBreadcrumbs = breadcrumbMap[location.pathname] || ['Overview']
+  const currentBreadcrumbs = breadcrumbMap[location.pathname] || ['Dashboard']
 
   const breadcrumbItems = [
     {
-      title: <Link to="/">Inventory</Link>,
+      title: <Link to="/">POS Manager</Link>,
     },
     ...currentBreadcrumbs.map((crumb, index) => ({
       title: index === currentBreadcrumbs.length - 1 ? crumb : <Text>{crumb}</Text>,
@@ -70,7 +72,7 @@ function MainLayout() {
             <span className="window-dot green" />
           </div>
           <Text type="secondary" style={{ fontSize: 13, fontWeight: 500 }}>
-            React Inventory Practice • Ant Design UI
+            Point of sale management
           </Text>
         </Header>
 
@@ -94,7 +96,7 @@ function MainLayout() {
         </Content>
 
         <Footer style={{ textAlign: 'center', color: '#8c8c8c', padding: '16px 50px' }}>
-          Stock Starter © {new Date().getFullYear()} — Built with React & Ant Design
+          POS Manager © {new Date().getFullYear()}
         </Footer>
       </Layout>
     </Layout>
@@ -102,4 +104,3 @@ function MainLayout() {
 }
 
 export default MainLayout
-

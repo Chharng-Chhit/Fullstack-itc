@@ -1,52 +1,37 @@
-import { useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router'
-import { starterProducts } from './data/products.js'
-import HomePage from './pages/HomePage.jsx'
-import ProductsPage from './pages/ProductsPage.jsx'
-import AddProductPage from './pages/AddProductPage.jsx'
+import { Navigate, Route, Routes } from 'react-router'
+import DashboardPage from './pages/DashboardPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
-import TeamOnePage from './pages/TeamOnePage.jsx'
-import TeamTwoPage from './pages/TeamTwoPage.jsx'
-import TeamLayout from './pages/TeamLayout.jsx'
-import UserPage from './pages/UserPage.jsx'
 import MainLayout from './layouts/MainLayout.jsx'
-import ShopLayout from './layouts/ShopLayout.jsx'
+import ProductsPage from './pages/ProductsPage.jsx'
+import CategoriesPage from './pages/CategoriesPage.jsx'
+import UsersPage from './pages/UsersPage.jsx'
+import SalesPage from './pages/SalesPage.jsx'
+import SaleItemsPage from './pages/SaleItemsPage.jsx'
+import PaymentsPage from './pages/PaymentsPage.jsx'
+import StockMovementsPage from './pages/StockMovementsPage.jsx'
+import NewPage from './pages/NewPage.jsx'
+import PageDetail from './pages/PageDetail.jsx'
 
 function App() {
-  // State is data that can change while the app is open.
-  const [products, setProducts] = useState(starterProducts)
-
-  // useEffect runs after React updates the page.
-  useEffect(() => {
-    document.title = `${products.length} products | Stock Starter`
-  }, [products.length])
-
-  function addProduct(newProduct) {
-    setProducts((prevProducts) => [...prevProducts, newProduct])
-  }
-
   return (
     <Routes>
-      {/* Main / Admin Layout with Sidebar */}
       <Route element={<MainLayout />}>
-        <Route path="/" element={<HomePage products={products} />} />
-        <Route path="/products" element={<ProductsPage products={products} />} />
-        <Route path="/add-product" element={<AddProductPage onAddProduct={addProduct} />} />
-        <Route path="/users" element={<UserPage />} />
-        <Route path="/team" element={<TeamLayout />}>
-          <Route index element={<p>Select Team 1 or Team 2 from the sidebar.</p>} />
-          <Route path="team-1" element={<TeamOnePage />} />
-          <Route path="team-2" element={<TeamTwoPage />} />
-        </Route>
-        <Route path="*" element={<NotFoundPage />} />
+        <Route index element={<DashboardPage />} />
+        <Route path="products" element={<ProductsPage />} />
+        <Route path="categories" element={<CategoriesPage />} />
+        <Route path="users" element={<UsersPage />} />
+        <Route path="sales" element={<SalesPage />} />
+        <Route path="sale-items" element={<SaleItemsPage />} />
+        <Route path="payments" element={<PaymentsPage />} />
+        <Route path="stock-movements" element={<StockMovementsPage />} />
+        <Route path="new-pages" element={<NewPage />} />
+        <Route path="/new-pages/:pageId" element={<PageDetail />} />
+        <Route path="login" element={<Navigate to="/" replace />} />
       </Route>
-
-      {/* New /shop Layout */}
-      <Route path="/shop" element={<ShopLayout />}>
-        <Route index element={<UserPage />} />
-      </Route>
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   )
 }
 
 export default App
+
